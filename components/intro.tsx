@@ -27,7 +27,7 @@ const Intro = () => {
               duration: 0.2,
             }}>
             <Image
-              src="/project2.png"
+              src="/profil.jpg"
               alt="Personal"
               width={192}
               height={192}
