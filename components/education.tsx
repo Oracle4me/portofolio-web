@@ -19,26 +19,26 @@ const Education = () => {
       ref={ref}
       id="education"
       className="mb-32 sm:min-w-[52rem] scroll-mt-28">
-      <SectionHeading>Education</SectionHeading>
-      <VerticalTimeline lineColor="#b7c1cc">
+      <SectionHeading>EDUCATION</SectionHeading>
+      <VerticalTimeline lineColor="black">
         {educationData.map((item, index) => (
           <React.Fragment key={index}>
             <VerticalTimelineElement
               visible={true}
-              className="vertical-timeline-element--left"
+              className="vertical-timeline-element--work"
               contentStyle={{
                 background: "#1c1c20",
                 boxShadow: "none",
-                border: "1px solid rgba(0,0,0,0.05)",
-                textAlign: "left",
-                padding: "1.3rem 2rem",
+                borderRight: "1px solid rgba(0,0,0,0.05)",
+                padding: "1.3rem 1rem",
               }}
               date={item.date}
+              dateClassName="ml-4 text-gray-950"
               icon={item.icon}
               iconStyle={{
                 background: "#1c1c20",
-                color: "#b7c1cc",
-                fontSize: "1.5rem",
+                color: "white",
+                fontSize: "1rem",
                 boxShadow: "revert",
                 border: "2px solid black",
               }}
@@ -48,7 +48,6 @@ const Education = () => {
                 {item.institution}
               </h4>
               <h4 className="font-medium capitalize">{item.location}</h4>
-              <p>{item.description}</p>
             </VerticalTimelineElement>
           </React.Fragment>
         ))}

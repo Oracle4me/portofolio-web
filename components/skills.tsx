@@ -26,14 +26,14 @@ const Skills = () => {
       id="skills"
       ref={ref}
       className="mb-28 max-w-[53rem] text-center xs:mb-40 scroll-mt-28">
-      <SectionHeading>My Skills</SectionHeading>
+      <SectionHeading>SKILLS</SectionHeading>
       <ul className="flex flex-wrap items-center justify-center  gap-2 text-md">
         {skillsData.map((skill, index) => {
           const Icons = skill.icon;
           return (
             <motion.li
               key={index}
-              className="flex items-center gap-1 dark:bg-white/10 px-5 py-1 rounded-xl "
+              className="flex items-center gap-1 border dark:bg-white/10 px-5 py-1 rounded-xl text-gray-950"
               variants={fadeInAnimationVariants}
               initial="initial"
               whileInView="animate"

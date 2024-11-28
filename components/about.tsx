@@ -12,13 +12,16 @@ const About = () => {
     <motion.section
       ref={ref}
       id="about"
-      className="mb-28 max-w-[45rem] sm:text-center  text-justify leading-8 sm:mb-40 scroll-mt-28"
+      className="mb-28 max-w-[50rem] leading-8 sm:mb-40 scroll-mt-28 mt-32"
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.175 }}>
-      <SectionHeading>About Me</SectionHeading>
-      <p className="mb-3">
-        Hi, I'm Kevin, and I'm a college student who wants to become as {""}
+      <SectionHeading>ABOUT ME</SectionHeading>
+      <span className="text-2xl font-semibold text-gray-950">
+        Hi There, I'm Kevin
+      </span>
+      <p className="mb-3 text-gray-950">
+        I'm a college student who wants to become as {""}
         <span className="font-medium">Software Engineer</span>. I decided to
         pursue my passion for programming. I am a self-taught person learning{" "}
         {""}
@@ -32,14 +35,12 @@ const About = () => {
         </span>
         . I'm also familiar with{" "}
         <span className="font-semibold">TypeScript and Prisma</span>. I am
-        always looking forward to learning new technologies. I am currently
-        looking for a{" "}
-        <span className="font-semibold">full-time or freelance</span> position
-        as a software developer.
+        always looking forward to learning new technologies.
+        <span className="font-semibold"></span>
       </p>
-      <p className="font-medium">
-        I have some hobbies to pass the time, like programming, singing, playing
-        video games, working with Arduino, and exploring cybersecurity.
+      <p className="font-medium text-gray-950">
+        I have some hobbies to pass the time, like programming, playing video
+        games, and exploring cybersecurity.
       </p>
     </motion.section>
   );

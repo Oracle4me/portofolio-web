@@ -1,5 +1,5 @@
 import About from "@/components/about";
-import Contact from "@/components/contact";
+import Contact from "@/components/get-in-touch";
 import Education from "@/components/education";
 import Intro from "@/components/intro";
 import Projects from "@/components/projects";
@@ -10,7 +10,6 @@ export default function Home() {
   return (
     <main className="flex flex-col items-center px-4">
       <Intro />
-      <SectionDivider />
       <About />
       <Projects />
       <Skills />

@@ -39,10 +39,12 @@ const ProjectCard = ({
         opacity: opacityProgress,
       }}
       className="group mb-3 sm:mb-8 last:mb-0 group-even:pl-8">
-      <section className="relative dark:bg-white/10 h-[20rem] sm:max-w-[42rem] min-w-[25rem] border border-black/5 overflow-hidden sm:pr-8 sm:h-[20rem] hover:dark:bg-white/15 rounded-lg transition">
+      <section className="relative dark:bg-white/10 h-[20rem] sm:max-w-[42rem] min-w-[25rem] border border-black/20 overflow-hidden sm:pr-8 sm:h-[20rem] hover:dark:bg-white/15 rounded-lg transition shadow-md">
         <div className="flex flex-col justify-betweebn h-full pl-4 pr-28 py-6 sm:py-8 sm:pb-7 sm:px-4 sm:pr-2 sm:pt-2 sm:max-w-[50%] group-even:pr-4 group-even:pl-28 sm:group-even:ml-[20rem] sm:group-even:pl-4">
-          <h3 className="text-2xl font-semibold">{title}</h3>
-          <p className="mt-2 leading-relaxed text-justify">{description}</p>
+          <h3 className="text-2xl font-semibold text-gray-800">{title}</h3>
+          <p className="mt-2 leading-relaxed text-justify text-gray-900">
+            {description}
+          </p>
           <ul className="flex flex-wrap mt-2 gap-2 sm:mt-auto ">
             {tags.map((tag, index) => (
               <li
@@ -53,7 +55,7 @@ const ProjectCard = ({
             ))}
           </ul>
           <Link href={linkGit} className="sm:mt-3 max-w-fit rounded-full">
-            <FaGithub className="w-6 h-6 hover:text-gray-100 hover:scale-110" />
+            <FaGithub className="w-8 h-8 hover:text-black/[0.8] hover:scale-110 text-black/[0.7]" />
           </Link>
         </div>
         <Image

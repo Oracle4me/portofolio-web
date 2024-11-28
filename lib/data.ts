@@ -1,6 +1,8 @@
 import React from "react";
 
-import project1 from "@/public/project2.png";
+import project1 from "@/public/project1.png";
+import project2 from "@/public/project2.png";
+import project3 from "@/public/project3.png";
 import Project, { Skill } from "@/utils/type";
 import {
   FaHtml5,
@@ -45,35 +47,43 @@ export const links = [
     link: "#education",
   },
   {
-    name: "Contact",
-    link: "#contact",
+    name: "Get In Touch",
+    link: "#get_in_touch",
   },
 ];
 
 export const projectsData: Project[] = [
   {
-    title: "Login Authentication",
+    title: "Login Authentication (MERN Stack)",
     description:
-      "I'm making some Advance Login Authentication with OAuth, Jwt and 2FA",
-    tags: ["React", "Next.js", "Prisma", "Tailwind", "Typescript", "Next-Auth"],
+      "I'm making some Advance Login Authentication with OAuth, JWT and 2FA",
+    tags: [
+      "React",
+      "Next.js",
+      "Prisma",
+      "Tailwind",
+      "Typescript",
+      "Next-Auth",
+      "Mongo DB",
+    ],
     linkGit: "https://github.com/Oracle4me/login-page-react",
     imageUrl: project1,
   },
   {
-    title: "Login Authentication",
+    title: "To Do List (MERN Stack)",
     description:
-      "I'm making some Advance Login Authentication with OAuth, Jwt and 2FA",
-    tags: ["React", "Next.js", "Prisma", "Tailwind", "Typescript", "Next-Auth"],
-    linkGit: "https://github.com/Oracle4me/login-page-react",
-    imageUrl: project1,
+      "I'm making a To-Do List with a Persona 5 theme that implements CRUD functionality, but it's not responsive yet.",
+    tags: ["Mongo DB", "Express JS", "React", "Node JS"],
+    linkGit: "https://github.com/Oracle4me/todolist_p5",
+    imageUrl: project2,
   },
   {
-    title: "Login Authentication",
+    title: "Enchance Shop",
     description:
-      "I'm making some Advance Login Authentication with OAuth, Jwt and 2FA",
-    tags: ["React", "Next.js", "Prisma", "Tailwind", "Typescript", "Next-Auth"],
-    linkGit: "",
-    imageUrl: project1,
+      "I'm creating an e-commerce site using HTML, CSS, and JavaScript. This site is one of my client projects, and thanks to their permission, I am able to showcase this work.",
+    tags: ["Html", "Css", "JavaScript"],
+    linkGit: "https://github.com/Oracle4me/enchance-shop",
+    imageUrl: project3,
   },
 ];
 
@@ -138,7 +148,7 @@ export const skillsData = [
 
 export const educationData = [
   {
-    title: "Bachelor of Informatics",
+    title: "S1 - Informatika",
     institution: "Universitas PGRI Semarang",
     location: "Jl. Sidodadi Timur, Jalan Dokter Cipto No.24",
     description: "Currently pursuing a degree in Informatics",

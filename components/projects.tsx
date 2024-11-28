@@ -11,7 +11,7 @@ const Projects = () => {
 
   return (
     <section ref={ref} id="projects" className="mb-28 scroll-mt-28">
-      <SectionHeading>My Projects</SectionHeading>
+      <SectionHeading>PROJECTS</SectionHeading>
       <div>
         {projectsData.map((project, index) => (
           <ProjectCard key={index} {...project} />

@@ -2,20 +2,19 @@
 
 import React from "react";
 import SectionHeading from "./section-heading";
-import { FaPaperPlane } from "react-icons/fa";
 import useSectionContext from "@/hooks/hook";
 
 import { motion } from "framer-motion";
-import { sendEmail } from "@/actions/sendEmail";
+import { sendEmail } from "@/action/sendEmail";
 import { SubmitButton } from "./submit-btn";
 import toast from "react-hot-toast";
 
 const Contact = () => {
-  const { ref } = useSectionContext("Contact", 0.4);
+  const { ref } = useSectionContext("Get In Touch", 0.4);
   return (
     <motion.section
       ref={ref}
-      id="contact"
+      id="get_in_touch"
       className="mb-20 sm:mb-28 scroll-mt-28 w-[min(100%, 38rem)]"
       initial={{
         opacity: 0,
@@ -29,8 +28,8 @@ const Contact = () => {
       viewport={{
         once: true,
       }}>
-      <SectionHeading>Contact Me</SectionHeading>
-      <p className="-mt-6 text-center">
+      <SectionHeading>GET IN TOUCH</SectionHeading>
+      <p className="-mt-6 text-center text-gray-950">
         Please contact me directly at{" "}
         <a className="underline" href="mailto:nurmkevin532@gmail.com">
           email
@@ -54,14 +53,14 @@ const Contact = () => {
         <input
           name="email"
           type="email"
-          className="h-12 px-4 rounded border border-white outline-none text-gray-900"
+          className="h-12 px-4 rounded border border-slate-950/5 outline-none text-gray-900 bg-gray-950/10"
           placeholder="Your email"
           required
           maxLength={500}
         />
         <textarea
           name="message"
-          className="mt-2 h-52 rounded-lg p-4 border border-black text-gray-900 outline-none"
+          className="mt-2 h-52 rounded-lg p-4 border-slate-950/5 border-black text-gray-900 bg-slate-950/10 outline-none"
           placeholder="Your message"
           required
           maxLength={225}

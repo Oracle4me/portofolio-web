@@ -4,37 +4,76 @@ import Link from "next/link";
 import clsx from "clsx";
 
 import { links } from "@/lib/data";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { useActiveSectionContext } from "@/components/section-active-context";
+import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { useState } from "react";
+import { GiHamburgerMenu } from "react-icons/gi";
 
 export const Header = () => {
   const { activeSection, setActiveSection, setTimeLastClick } =
     useActiveSectionContext();
 
+  const [isOpen, setOpen] = useState(false);
+
+  const handleClick = () => {
+    setOpen(!isOpen);
+  };
+
   return (
-    <div className="z-[999] relative">
+    <header className="fixed flex px-12 xl:px-32 py-6 md:py-4 items-center justify-between border-b w-full z-50 bg-transparent backdrop-blur-sm">
       <motion.div
-        className="fixed top-0 left-1/2 h-[4.5rem] w-full rounded-none border border-gray-300 bg-black/25 border-opacity-40 shadow-lg shadow-black/[0.05] backdrop-blur-[0.5rem] -translate-x-1/2 sm:top-6 sm:h-[3.35rem] sm:w-[36rem] sm:rounded-full"
+        className=""
         initial={{ y: -100, x: "-50%", opacity: 0 }}
         animate={{ y: 0, x: "-50%", opacity: 1 }}></motion.div>
-      <nav className="flex fixed top-[0.15rem] left-1/2 -translate-x-1/2 h-12 py-2 sm:top-[1.7rem] sm:h-[initial] sm:py-0 text-[#4a4a4a] ">
+      <nav className="items-center justify-start w-full md:flex">
+        {/* Mobile Menu */}
+        <div
+          className="md:hidden text-black flex cursor-pointer"
+          onClick={handleClick}>
+          <GiHamburgerMenu className="w-6 h-6" />
+        </div>
+        <AnimatePresence>
+          {isOpen && (
+            <motion.div
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: "auto", opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              className="absolute top-12 left-0 w-full bg-gray-100 shadow-lg z-50">
+              <ul className="flex flex-col gap-2 p-4 text-gray-900 ">
+                {links.map((link) => (
+                  <li key={link.link}>
+                    <Link
+                      href={link.link}
+                      className={clsx("block py-2 px-4 rounded-md", {
+                        "bg-gray-200 font-bold": activeSection === link.name,
+                      })}
+                      onClick={() => {
+                        setActiveSection(link.name);
+                        setTimeLastClick(Date.now());
+                        setOpen(false);
+                      }}>
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+          )}
+        </AnimatePresence>
         <ul
-          className="flex w-[22rem] flex-wrap items-center justify-center gap-y-1 mt-4 sm:mt-0
-        gap-2
-        text-[0.9rem] font-medium sm:w-[initial] sm:flex-nowrap sm:gap-5">
+          className="md:flex w-[22rem] flex-wrap gap-y-1 mt-4 sm:mt-0
+        gap-2 text-[0.9rem] font-medium sm:w-[initial] sm:flex-nowrap sm:gap-5 hidden">
           {links.map((links) => (
             <motion.li
               key={links.link}
-              className="relative flex justify-center items-center h-3/4"
+              className="relative flex items-center h-3/4"
               initial={{ y: -100, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}>
               <Link
-                className={clsx(
-                  "flex w-full px-0 py-3 justify-center items-center text-gray-300 hover:text-white transition sm:px-3",
-                  {
-                    "text-white": activeSection === links.name,
-                  }
-                )}
+                className={clsx("flex w-full px-0 py-3 text-gray-950", {
+                  "text-black font-bold": activeSection === links.name,
+                })}
                 href={links.link}
                 onClick={() => {
                   setActiveSection(links.name);
@@ -44,7 +83,7 @@ export const Header = () => {
                 {links.name}
                 {links.name === activeSection && (
                   <motion.span
-                    className="bg-gray-700/30 rounded-full absolute inset-0 -z-10"
+                    className="bg-gray-900/90 absolute inset-0 z-10 h-[2px] left-0 top-8"
                     layoutId="activeSection"
                     transition={{
                       type: "spring",
@@ -57,7 +96,32 @@ export const Header = () => {
           ))}
         </ul>
       </nav>
-    </div>
+      {/* Social Media */}
+      <div className="flex items-center justify-center">
+        <nav className="flex items-center text-gray-950">
+          <motion.li
+            className="relative flex items-center gap-2"
+            initial={{ y: -100, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}>
+            <Link
+              className="transition-colors hover:text-gray-900/70 duration-200"
+              href="https://www.linkedin.com/in/nur-muhammad-kevin-453157292/">
+              <FaLinkedin className="h-6 w-6" />
+            </Link>
+            <Link
+              className="transition-colors hover:text-gray-900/70 duration-200"
+              href="https://www.instagram.com/nurmuhkevin/">
+              <FaInstagram className="h-6 w-6" />
+            </Link>
+            <Link
+              className="transition-colors hover:text-gray-900/70 duration-200"
+              href="https://github.com/oracle4me">
+              <FaGithub className="h-6 w-6" />
+            </Link>
+          </motion.li>
+        </nav>
+      </div>
+    </header>
   );
 };
 

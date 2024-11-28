@@ -16,26 +16,9 @@ const Intro = () => {
     <section
       ref={ref}
       id="home"
-      className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]">
+      className="mt-28 w-full text-center sm:mb-0 scroll-mt-[100rem]">
       <div className="flex justify-center items-center !leading-[1.5] sm:text-4xl">
-        <div className="relative mt-24">
-          <motion.div
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{
-              type: "tween",
-              duration: 0.2,
-            }}>
-            <Image
-              src="/profil.jpg"
-              alt="Personal"
-              width={192}
-              height={192}
-              quality={95}
-              priority={true}
-              className="rounded-full h-24 w-24 border-[0.35rem] border-white shadow-xl"
-            />
-          </motion.div>
+        <div className="relative mt-20">
           <motion.span
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -52,22 +35,28 @@ const Intro = () => {
         className="mb-10 mt-4 px-4 text-2xl font-medium "
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 1 }}>
-        <span className="font-bold">
-          Hello, I'm Kevin.
+        <span className="font-bold text-gray-950 text-6xl">
+          Welcome To My Portofolio
           <br />
         </span>
-        I'm a{" "}
-        <span className="font-bold">
-          Beginner's in full stack developer
+        <span className="font-semibold text-2xl text-slate-950">
+          I'm Nur Muhammad Kevin
           <br />
         </span>
-        I really enjoy
-        <span className="italic">
-          make some sites.
+        <span className="font-medium text-xl text-gray-950 px-12">
+          A passionate web developer dedicated to crafting modern, responsive,
+          and user-friendly websites.
           <br />
         </span>
-        My focus is {""}
-        <span className="underline">React (Next.js)</span>
+        <span className="italic text-gray-800 text-xl">
+          Explore my portfolio to see how I turn ideas into impactful digital
+          experiences
+          <br />
+        </span>
+
+        <span className="text-xl text-gray-900 font-bold">
+          For now, my focus is Next.js
+        </span>
       </motion.p>
       <motion.div
         className="flex flex-col sm:flex-row justify-center items-center gap-2 px-4 text-md font-medium"
@@ -94,20 +83,6 @@ const Intro = () => {
           Download CV{" "}
           <HiDownload className="opacity-75 group-hover:translate-y-1 transition" />
         </a>
-        <div className="flex gap-2">
-          <a
-            className="bg-white text-black p-4 flex items-center gap-2 rounded-full hover:scale-110 focus:scale-110 active:scale-105 transistion cursor-pointer border border-black/10"
-            href="https://www.linkedin.com/in/nur-muhammad-kevin-453157292/"
-            target="_blank">
-            <BsLinkedin />
-          </a>
-          <a
-            className="bg-white text-black p-4 flex items-center gap-2 rounded-full hover:scale-[1.15] focus:scale-[1.15] active:scale-105 transistion cursor-pointer border border-black/10"
-            href="https://github.com/oracle4me"
-            target="_blank">
-            <BsGithub />
-          </a>
-        </div>
       </motion.div>
     </section>
   );
