@@ -21,6 +21,7 @@ import {
   SiMongodb,
   SiMysql,
   SiPrisma,
+  SiTypescript,
 } from "react-icons/si";
 
 import { LuGraduationCap } from "react-icons/lu";
@@ -99,6 +100,10 @@ export const skillsData = [
   {
     label: "JavaScript",
     icon: FaJsSquare,
+  },
+  {
+    label: "TypeScript",
+    icon: SiTypescript,
   },
   {
     label: "React",

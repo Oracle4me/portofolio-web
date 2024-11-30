@@ -59,14 +59,14 @@ const Intro = () => {
         </span>
       </motion.p>
       <motion.div
-        className="flex flex-col sm:flex-row justify-center items-center gap-2 px-4 text-md font-medium"
+        className="flex flex-col sm:flex-row justify-center items-center gap-4 px-4 text-md font-medium"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
           delay: 0.3,
         }}>
         <Link
-          href="#contact"
+          href="#get_in_touch"
           className="group flex items-center bg-gray-900 px-7 py-3 gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-900 active:scale-105 transition">
           Contact Me{" "}
           <BsArrowRight
@@ -78,7 +78,7 @@ const Intro = () => {
           />
         </Link>
         <a
-          href="/"
+          href="https://drive.google.com/file/d/1ajVZgrPHFIvmL2WDTbZTPfmhJyOcz4aE/view?usp=sharing"
           className="group flex items-center bg-white text-slate-900 px-7 py-3 gap-2 rounded-full hover:scale-105 focus:scale-110 active:scale-105 transistion cursor-pointer border border-black/10">
           Download CV{" "}
           <HiDownload className="opacity-75 group-hover:translate-y-1 transition" />
