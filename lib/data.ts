@@ -56,6 +56,13 @@ export const links = [
 export const projectsData: Project[] = [
   {
     title: "Login Authentication (MERN Stack)",
+    description: "I'm making some MERN stack login Authentication",
+    tags: ["MongoDB", "ExpressJS", "React", "NodeJS"],
+    linkGit: "https://github.com/Oracle4me/login-page-react",
+    imageUrl: project1,
+  },
+  {
+    title: "Login Authentication (MERN Stack)",
     description:
       "I'm making some Advance Login Authentication with OAuth, JWT and 2FA",
     tags: [
@@ -83,6 +90,14 @@ export const projectsData: Project[] = [
     description:
       "I'm creating an e-commerce site using HTML, CSS, and JavaScript. This site is one of my client projects, and thanks to their permission, I am able to showcase this work.",
     tags: ["Html", "Css", "JavaScript"],
+    linkGit: "https://github.com/Oracle4me/enchance-shop",
+    imageUrl: project3,
+  },
+  {
+    title: "Oracle Shop",
+    description:
+      "A modern E-commerce website with a responsive front end and robust backend, offering seamless shopping. [Development is ongoing]",
+    tags: ["NextJS", "TypeScript", "Tailwind", "MySQL", "Prisma", "Clerk"],
     linkGit: "https://github.com/Oracle4me/enchance-shop",
     imageUrl: project3,
   },
