@@ -96,10 +96,10 @@ export const projectsData: Project[] = [
   {
     title: "Oracle Shop",
     description:
-      "A modern E-commerce website with a responsive front end and robust backend, offering seamless shopping. [Development is ongoing]",
+      "A modern E-commerce website with a responsive front end and robust backend, offering seamless shopping. [Development is ongoing - Comming Soon]",
     tags: ["NextJS", "TypeScript", "Tailwind", "MySQL", "Prisma", "Clerk"],
-    linkGit: "https://github.com/Oracle4me/enchance-shop",
-    imageUrl: project3,
+    linkGit: "",
+    imageUrl: "",
   },
 ];
 
