@@ -78,7 +78,7 @@ const Intro = () => {
           />
         </Link>
         <a
-          href="https://drive.google.com/file/d/1ajVZgrPHFIvmL2WDTbZTPfmhJyOcz4aE/view?usp=sharing"
+          href="https://drive.google.com/file/d/1XwPSRuLlZktR8qz5ecfnfhjxYlm-yKYv/view?usp=drive_link"
           className="group flex items-center bg-white text-slate-900 px-7 py-3 gap-2 rounded-full hover:scale-105 focus:scale-110 active:scale-105 transistion cursor-pointer border border-black/10">
           Download CV{" "}
           <HiDownload className="opacity-75 group-hover:translate-y-1 transition" />
