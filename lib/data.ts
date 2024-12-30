@@ -3,6 +3,7 @@ import React from "react";
 import project1 from "@/public/project1.png";
 import project2 from "@/public/project2.png";
 import project3 from "@/public/project3.png";
+import project4 from "@/public/project4.png";
 import project5 from "@/public/project5.png";
 
 import Project, { Skill } from "@/utils/type";
@@ -86,7 +87,7 @@ export const projectsData: Project[] = [
       "I'm making a To-Do List with a Persona 5 theme that implements CRUD functionality, but it's not responsive yet.",
     tags: ["Mongo DB", "Express JS", "React", "Node JS"],
     linkGit: "https://github.com/Oracle4me/todolist_p5",
-    imageUrl: project2,
+    imageUrl: project3,
   },
   {
     title: "Enchance Shop",
@@ -94,7 +95,7 @@ export const projectsData: Project[] = [
       "I'm creating an e-commerce site using HTML, CSS, and JavaScript. This site is one of my client projects, and thanks to their permission, I am able to showcase this work.",
     tags: ["Html", "Css", "JavaScript"],
     linkGit: "https://github.com/Oracle4me/enchance-shop",
-    imageUrl: project3,
+    imageUrl: project4,
   },
   {
     title: "Oracle Shop",
