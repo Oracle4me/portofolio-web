@@ -109,7 +109,7 @@ export const projectsData: Project[] = [
     title: "Gemini Clone",
     description:
       "Clone of the Gemini platform, offering similar features and functionality, built with modern web technologies.",
-    tags: ["ReacJS", "JavaScript", "Tailwind"],
+    tags: ["React", "JavaScript", "Tailwind"],
     linkGit: "https://github.com/Oracle4me/gemini-clone",
     imageUrl: project5,
   },
