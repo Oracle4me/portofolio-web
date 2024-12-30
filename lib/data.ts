@@ -3,6 +3,8 @@ import React from "react";
 import project1 from "@/public/project1.png";
 import project2 from "@/public/project2.png";
 import project3 from "@/public/project3.png";
+import project5 from "@/public/project5.png";
+
 import Project, { Skill } from "@/utils/type";
 import {
   FaHtml5,
@@ -62,9 +64,9 @@ export const projectsData: Project[] = [
     imageUrl: project1,
   },
   {
-    title: "Login Authentication (MERN Stack)",
+    title: "Simple Authentication wit Next Auth (NextJs 14)",
     description:
-      "I'm making some Advance Login Authentication with OAuth, JWT and 2FA",
+      "I'm making some simple Authentication with Next Auth and NextJs",
     tags: [
       "React",
       "Next.js",
@@ -72,10 +74,11 @@ export const projectsData: Project[] = [
       "Tailwind",
       "Typescript",
       "Next-Auth",
-      "Mongo DB",
+      "MongoDB",
+      "Potsgresql",
     ],
-    linkGit: "https://github.com/Oracle4me/login-page-react",
-    imageUrl: project1,
+    linkGit: "https://github.com/Oracle4me/nextjs14-simple-auth",
+    imageUrl: project2,
   },
   {
     title: "To Do List (MERN Stack)",
@@ -100,6 +103,14 @@ export const projectsData: Project[] = [
     tags: ["NextJS", "TypeScript", "Tailwind", "MySQL", "Prisma", "Clerk"],
     linkGit: "",
     imageUrl: "",
+  },
+  {
+    title: "Gemini Clone",
+    description:
+      "Clone of the Gemini platform, offering similar features and functionality, built with modern web technologies.",
+    tags: ["ReacJS", "JavaScript", "Tailwind"],
+    linkGit: "https://github.com/Oracle4me/gemini-clone",
+    imageUrl: project5,
   },
 ];
 
